@@ -8,7 +8,7 @@ except:
 	from keras.models import load_model
 import pickle
 
-def process(imagepath,modelpath,picklepath):
+def process(imagepath):
 		try:
 				image = cv2.imread(str(imagepath))
 				print(imagepath)
@@ -24,14 +24,14 @@ def process(imagepath,modelpath,picklepath):
 		print("Загружаю модель")
 		try:
 
-			model = load_model(str(modelpath))
+			model = load_model(str("imageprocessing\\resouces\\model.h5"))
 		
 		except:
 			print ("Неверный формат файла либо неверный путь к файлу модели")
 			exit(1)
 	    
 		try:
-			lb = pickle.loads(open(str(picklepath), "rb").read())
+			lb = pickle.loads(open(str("imageprocessing\\resouces\\pic.pickle"), "rb").read())
         
 		except:
 
