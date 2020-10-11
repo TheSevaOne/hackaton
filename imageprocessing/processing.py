@@ -3,9 +3,9 @@
 #*
 import cv2 as cv2 
 try:
-	from tensorflow.keras.models import load_model
-except:
 	from keras.models import load_model
+except:
+	from tensorflow.keras.models import load_model
 import pickle
 
 def process(imagepath):
