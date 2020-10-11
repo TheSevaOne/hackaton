@@ -1,3 +1,6 @@
+#/**
+#* Copyright (c) 2020, Vsevolod Averkov <averkov@cs.petrsu.ru>
+#*
 import matplotlib
 matplotlib.use("Agg")
 import numpy as np
